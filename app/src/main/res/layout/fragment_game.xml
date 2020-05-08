@@ -18,6 +18,40 @@
             android:id="@+id/radioGroupQuestion"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="1" />
+            android:layout_weight="1" >
+
+            <RadioButton
+                android:id="@+id/radioOPtionA"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:text="RadioButton"
+                tools:text="RadioButton A"
+                style="@style/Widget.MaterialComponents.CompoundButton.RadioButton"/>
+
+            <RadioButton
+                android:id="@+id/radioOPtionB"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"                android:text="RadioButton"
+                tools:text="RadioButton B"
+                style="@style/Widget.MaterialComponents.CompoundButton.RadioButton"/>
+
+            <RadioButton
+                android:id="@+id/radioOPtionC"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"                android:text="RadioButton"
+                tools:text="RadioButton C"
+                style="@style/Widget.MaterialComponents.CompoundButton.RadioButton"/>
+
+            <RadioButton
+                android:id="@+id/radioOPtionD"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"                android:text="RadioButton"
+                tools:text="RadioButton D"
+                style="@style/Widget.MaterialComponents.CompoundButton.RadioButton"/>
+        </RadioGroup>
     </LinearLayout>
 </layout>
