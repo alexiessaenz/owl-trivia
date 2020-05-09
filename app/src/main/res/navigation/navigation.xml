@@ -9,5 +9,13 @@
         android:id="@+id/titleFragment"
         android:name="com.naldana.owltrivia.TitleFragment"
         android:label="TitleFragment"
-        tools:layout="@layout/fragment_title"/>
+        tools:layout="@layout/fragment_title">
+        <action
+            android:id="@+id/action_titleFragment_to_gameFragment"
+            app:destination="@id/gameFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/gameFragment"
+        android:name="com.naldana.owltrivia.GameFragment"
+        android:label="GameFragment" />
 </navigation>

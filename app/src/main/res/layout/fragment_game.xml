@@ -37,7 +37,7 @@
                 android:id="@+id/radioOptionA"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="RadioButton"
+                android:text="@={game.answers[0]}"
                 tools:text="RadioButton A"
                 style="@style/Widget.MaterialComponents.CompoundButton.RadioButton"/>
 
@@ -45,7 +45,7 @@
                 android:id="@+id/radioOptionB"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                 android:text="RadioButton"
+                android:text="@={game.answers[1]}"
                 tools:text="RadioButton B"
                 style="@style/Widget.MaterialComponents.CompoundButton.RadioButton"/>
 
@@ -54,7 +54,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
-                android:text="RadioButton"
+                android:text="@={game.answers[2]}"
                 tools:text="RadioButton C"
                 style="@style/Widget.MaterialComponents.CompoundButton.RadioButton"/>
 
@@ -63,7 +63,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
-                android:text="RadioButton"
+                android:text="@={game.answers[3]}"
                 tools:text="RadioButton D"
                 style="@style/Widget.MaterialComponents.CompoundButton.RadioButton"/>
         </RadioGroup>
