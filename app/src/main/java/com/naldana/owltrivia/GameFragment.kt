@@ -18,6 +18,7 @@ class GameFragment : Fragment() {
         val text:String,
         val answers:List<String>
     )
+
     private val questions: MutableList<Question> = mutableListOf(
         Question(
             text = "pregunta 1",
@@ -51,7 +52,6 @@ class GameFragment : Fragment() {
             text = "pregunta 8",
             answers = listOf("Buena","mala 1", "mala 2", "mala 3" )
         )
-
     )
 
     lateinit var currentQuestion: Question
@@ -63,17 +63,16 @@ class GameFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
         val binding = DataBindingUtil.inflate<FragmentGameBinding>(
-            inflater,
-            R.layout.fragment_game,
-            container,
-            false
+            inflater, R.layout.fragment_game, container, false
         )
+
 
         randomizeQuestions()
 
+
         binding.game = this
+
 
         binding.submitButton.setOnClickListener {
             val checkId = binding.radioGroupQuestion.checkedRadioButtonId
@@ -85,26 +84,25 @@ class GameFragment : Fragment() {
                     R.id.radioOptionC -> answerIndex = 2
                     R.id.radioOptionD -> answerIndex = 3
                 }
+
                 if (answers[answerIndex] == currentQuestion.answers[0]) {
-                    answerIndex++
+                    questionIndex++
 
                     if (questionIndex < numQuestions) {
                         currentQuestion = questions[questionIndex]
                         setQuestion()
+                        binding.radioGroupQuestion.clearCheck()
                         binding.invalidateAll()
                     } else {
-                        //win
+                        // Won
                     }
                 } else {
-                    //loose
+                    // Over
                 }
-
             }
-
-
         }
 
-        return binding.root//inflater.inflate(R.layout.fragment_game, container, false)
+        return binding.root
     }
 
     private fun randomizeQuestions(){
@@ -117,7 +115,9 @@ class GameFragment : Fragment() {
         currentQuestion = questions[questionIndex]
         answers = currentQuestion.answers.toMutableList()
         answers.shuffle()
-        (activity as AppCompatActivity).supportActionBar?.title = getString(R.string.title_owl_trivia_question,
-            questionIndex+1,numQuestions)
+        (activity as AppCompatActivity)
+            .supportActionBar?.title =
+            getString(R.string.title_owl_trivia_question,
+            questionIndex + 1, numQuestions)
     }
 }
