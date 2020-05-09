@@ -2,6 +2,13 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="game"
+            type="com.naldana.owltrivia.GameFragment" />
+    </data>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -12,16 +19,23 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
-            app:srcCompat="@drawable/owl_reading" />
+            app:srcCompat="@drawable/owl_reading"
+            android:layout_margin="@dimen/margin_wide"/>
 
-        <RadioGroup
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_margin="@dimen/margin_wide">
+
+            <RadioGroup
             android:id="@+id/radioGroupQuestion"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="1" >
+            >
 
             <RadioButton
-                android:id="@+id/radioOPtionA"
+                android:id="@+id/radioOptionA"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
@@ -30,28 +44,40 @@
                 style="@style/Widget.MaterialComponents.CompoundButton.RadioButton"/>
 
             <RadioButton
-                android:id="@+id/radioOPtionB"
+                android:id="@+id/radioOptionB"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight="1"                android:text="RadioButton"
+                android:layout_weight="1"
+                android:text="RadioButton"
                 tools:text="RadioButton B"
                 style="@style/Widget.MaterialComponents.CompoundButton.RadioButton"/>
 
             <RadioButton
-                android:id="@+id/radioOPtionC"
+                android:id="@+id/radioOptionC"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight="1"                android:text="RadioButton"
+                android:layout_weight="1"
+                android:text="RadioButton"
                 tools:text="RadioButton C"
                 style="@style/Widget.MaterialComponents.CompoundButton.RadioButton"/>
 
             <RadioButton
-                android:id="@+id/radioOPtionD"
+                android:id="@+id/radioOptionD"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight="1"                android:text="RadioButton"
+                android:layout_weight="1"
+                android:text="RadioButton"
                 tools:text="RadioButton D"
                 style="@style/Widget.MaterialComponents.CompoundButton.RadioButton"/>
         </RadioGroup>
+        </ScrollView>
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Button"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/margin_wide"/>
     </LinearLayout>
 </layout>
