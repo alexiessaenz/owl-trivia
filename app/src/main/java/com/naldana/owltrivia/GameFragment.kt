@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
+import androidx.navigation.findNavController
 import com.naldana.owltrivia.databinding.FragmentGameBinding
 
 /**
@@ -74,7 +75,7 @@ class GameFragment : Fragment() {
         binding.game = this
 
 
-        binding.submitButton.setOnClickListener {
+        binding.submitButton.setOnClickListener { view: View ->
             val checkId = binding.radioGroupQuestion.checkedRadioButtonId
 
             if (-1 != checkId) {
@@ -95,9 +96,11 @@ class GameFragment : Fragment() {
                         binding.invalidateAll()
                     } else {
                         // Won
+                        view.findNavController().navigate(R.id.action_gameFragment_to_gameWonFragment)
                     }
                 } else {
                     // Over
+                    view.findNavController().navigate(R.id.action_gameFragment_to_gameOverFragment)
                 }
             }
         }
