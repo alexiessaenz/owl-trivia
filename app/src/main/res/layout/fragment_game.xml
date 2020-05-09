@@ -31,14 +31,12 @@
             <RadioGroup
             android:id="@+id/radioGroupQuestion"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            >
+            android:layout_height="wrap_content" >
 
             <RadioButton
                 android:id="@+id/radioOptionA"
                 android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
+                android:layout_height="wrap_content"
                 android:text="RadioButton"
                 tools:text="RadioButton A"
                 style="@style/Widget.MaterialComponents.CompoundButton.RadioButton"/>
@@ -46,9 +44,8 @@
             <RadioButton
                 android:id="@+id/radioOptionB"
                 android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:text="RadioButton"
+                android:layout_height="wrap_content"
+                 android:text="RadioButton"
                 tools:text="RadioButton B"
                 style="@style/Widget.MaterialComponents.CompoundButton.RadioButton"/>
 
@@ -73,10 +70,10 @@
         </ScrollView>
 
         <Button
-            android:id="@+id/button"
+            android:id="@+id/submit_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Button"
+            android:text="@string/text_send"
             android:layout_gravity="center"
             android:layout_margin="@dimen/margin_wide"/>
     </LinearLayout>
