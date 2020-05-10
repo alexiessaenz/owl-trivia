@@ -9,7 +9,7 @@ import androidx.databinding.DataBindingUtil
 import androidx.navigation.findNavController
 import com.naldana.owltrivia.databinding.FragmentGameOverBinding
 import com.naldana.owltrivia.databinding.FragmentGameWonBinding
-import com.naldana.owltrivia.databinding.FragmentGameWonBindingImpl
+
 
 /**
  * A simple [Fragment] subclass.
